@@ -1,0 +1,15 @@
+{
+  "name": "alfred-evernote",
+  "version": "1.0.0",
+  "description": "Search Evernote notes",
+  "main": "app.js",
+  "repository": "git@github.com:shaoshing/alfred-evernote.git",
+  "scripts": {
+  },
+  "author": "Shaoshing Lee",
+  "license": "ISC",
+  "dependencies": {
+    "alfred-workflow-nodejs": "^1.1.0",
+    "evernote": "^1.25.82"
+  }
+}

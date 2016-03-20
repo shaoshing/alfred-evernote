@@ -155,7 +155,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Evernote</string>
+	<string>Search Evernote</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -190,6 +190,27 @@ node app.js "search" "{query}"</string>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>764508F5-5780-46DC-90CD-1EEC82BE7452</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>export PATH=/usr/local/bin:$PATH
+
+open `node app.js "get-link" "app" "{query}"` || echo "Unable to open note."</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1E817040-44F2-45E5-92B1-78D552BC10A3</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -260,27 +281,6 @@ node app.js "search" "todo:false"</string>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>2CE06F60-F11A-4590-9D9B-746B1DF21A04</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>127</integer>
-				<key>script</key>
-				<string>export PATH=/usr/local/bin:$PATH
-
-open `node app.js "get-link" "app" "{query}"` || echo "Unable to open note."</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>1E817040-44F2-45E5-92B1-78D552BC10A3</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -460,6 +460,82 @@ node app.js "token" "{query}"</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>es</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>script</key>
+				<string>export PATH=/usr/local/bin:$PATH
+
+node app.js "search" "{query}"</string>
+				<key>title</key>
+				<string>Search Evernote</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>593B469B-6513-4F3F-9CCA-F4ABD9FD8534</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>es-search-shortcut-template</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>script</key>
+				<string># How to create a new shortcut
+# 
+# 1. Replace 'your-query' with your own search query.
+# 2. Update 'Keyword' and 'Placeholder Title'.
+# 3. Link the new command to the top most '/bin/bash' action.
+
+export PATH=/usr/local/bin:$PATH
+
+node app.js "search" "your-query"</string>
+				<key>title</key>
+				<string>Template to create new Search Shortcut</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>FA4E35D9-BA8D-4ADC-8270-B764C22877B7</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -473,7 +549,7 @@ node app.js "token" "{query}"</string>
 		<key>1E817040-44F2-45E5-92B1-78D552BC10A3</key>
 		<dict>
 			<key>ypos</key>
-			<real>230</real>
+			<real>10</real>
 		</dict>
 		<key>228750F9-D283-40D1-B09F-93C80911C868</key>
 		<dict>
@@ -500,6 +576,11 @@ node app.js "token" "{query}"</string>
 			<key>ypos</key>
 			<real>490</real>
 		</dict>
+		<key>593B469B-6513-4F3F-9CCA-F4ABD9FD8534</key>
+		<dict>
+			<key>ypos</key>
+			<real>730</real>
+		</dict>
 		<key>759F2B01-5583-4B0F-8F5E-6F74E40037D9</key>
 		<dict>
 			<key>ypos</key>
@@ -524,6 +605,11 @@ node app.js "token" "{query}"</string>
 		<dict>
 			<key>ypos</key>
 			<real>120</real>
+		</dict>
+		<key>FA4E35D9-BA8D-4ADC-8270-B764C22877B7</key>
+		<dict>
+			<key>ypos</key>
+			<real>850</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>

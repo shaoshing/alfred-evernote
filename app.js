@@ -51,11 +51,14 @@ actionHandler.onAction("search", function(query) {
         }
 
         result.notes.forEach(function (note) {
+            var updatedAt = new Date(note.updated);
+            
             workflow.addItem(new Item({
                 uid: note.guid,
                 title: note.title,
                 arg: note.guid,
                 valid: true,
+                subtitle: ["Updated:", updatedAt.toLocaleString()].join(" "),
                 icon: 'note.png'
             }));
         })

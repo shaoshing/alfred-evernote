@@ -166,7 +166,7 @@
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>keyword</key>
-				<string>es</string>
+				<string>e</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -514,7 +514,7 @@ node app.js "search" "{query}"</string>
 				<integer>2</integer>
 				<key>script</key>
 				<string># How to create a new shortcut
-# 
+#
 # 1. Replace 'your-query' with your own search query.
 # 2. Update 'Keyword' and 'Placeholder Title'.
 # 3. Link the new command to the top most '/bin/bash' action.
@@ -575,11 +575,6 @@ node app.js "search" "your-query"</string>
 		<dict>
 			<key>ypos</key>
 			<real>490</real>
-		</dict>
-		<key>593B469B-6513-4F3F-9CCA-F4ABD9FD8534</key>
-		<dict>
-			<key>ypos</key>
-			<real>730</real>
 		</dict>
 		<key>759F2B01-5583-4B0F-8F5E-6F74E40037D9</key>
 		<dict>

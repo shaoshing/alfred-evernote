@@ -176,7 +176,7 @@
 				<key>queuemode</key>
 				<integer>2</integer>
 				<key>script</key>
-				<string>export PATH=/usr/local/bin:$PATH
+        <string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 node app.js "search" "{query}"</string>
 				<key>title</key>
@@ -201,7 +201,7 @@ node app.js "search" "{query}"</string>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
-				<string>export PATH=/usr/local/bin:$PATH
+        <string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 open `node app.js "get-link" "app" "{query}"` || echo "Unable to open note."</string>
 				<key>type</key>
@@ -232,7 +232,7 @@ open `node app.js "get-link" "app" "{query}"` || echo "Unable to open note."</st
 				<key>queuemode</key>
 				<integer>2</integer>
 				<key>script</key>
-				<string>export PATH=/usr/local/bin:$PATH
+        <string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 node app.js "search" "updated:day-7"</string>
 				<key>title</key>
@@ -267,7 +267,7 @@ node app.js "search" "updated:day-7"</string>
 				<key>queuemode</key>
 				<integer>2</integer>
 				<key>script</key>
-				<string>export PATH=/usr/local/bin:$PATH
+        <string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 node app.js "search" "todo:false"</string>
 				<key>title</key>
@@ -302,7 +302,7 @@ node app.js "search" "todo:false"</string>
 				<key>queuemode</key>
 				<integer>2</integer>
 				<key>script</key>
-				<string>export PATH=/usr/local/bin:$PATH
+        <string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 node app.js "search" "created:day-14"</string>
 				<key>title</key>
@@ -327,7 +327,7 @@ node app.js "search" "created:day-14"</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>export PATH=/usr/local/bin:$PATH
+        <string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 open `node app.js "get-link" "www" "{query}"` || echo "Unable to open note."</string>
 				<key>type</key>
@@ -348,7 +348,7 @@ open `node app.js "get-link" "www" "{query}"` || echo "Unable to open note."</st
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
-				<string>export PATH=/usr/local/bin:$PATH
+        <string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 node app.js "token" "{query}"</string>
 				<key>type</key>
@@ -478,7 +478,7 @@ node app.js "token" "{query}"</string>
 				<key>queuemode</key>
 				<integer>2</integer>
 				<key>script</key>
-				<string>export PATH=/usr/local/bin:$PATH
+        <string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 node app.js "search" "{query}"</string>
 				<key>title</key>
@@ -519,7 +519,7 @@ node app.js "search" "{query}"</string>
 # 2. Update 'Keyword' and 'Placeholder Title'.
 # 3. Link the new command to the top most '/bin/bash' action.
 
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 node app.js "search" "your-query"</string>
 				<key>title</key>

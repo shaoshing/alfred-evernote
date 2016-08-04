@@ -40,6 +40,16 @@ actionHandler.onAction("search", function(query) {
             return;
         }
 
+        if (result.totalNotes == 0) {
+            workflow.addItem(new Item({
+                title: "Cannot find a Note for your search!",
+                valid: false,
+                icon: 'error.png'
+            }));
+            workflow.feedback();
+            return;    
+        }
+
         result.notes.forEach(function (note) {
             workflow.addItem(new Item({
                 uid: note.guid,

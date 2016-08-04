@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>0.0.1</string>
+	<string>0.1.1</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -17,6 +17,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>228750F9-D283-40D1-B09F-93C80911C868</key>
@@ -28,6 +30,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>2CE06F60-F11A-4590-9D9B-746B1DF21A04</key>
@@ -39,6 +43,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -47,6 +53,8 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Show in Browser</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>3DE67E6A-0E58-40C8-9720-000B41222200</key>
@@ -58,6 +66,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>58A09C85-AA7A-48BB-8CC6-F3ECA65E432A</key>
@@ -69,6 +79,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>764508F5-5780-46DC-90CD-1EEC82BE7452</key>
@@ -80,6 +92,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -88,6 +102,8 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Show in Browser</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>ACD8117F-82C9-4665-B13C-6C6F585F2F16</key>
@@ -99,6 +115,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -107,6 +125,8 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Show in Browser</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>C711834B-2A95-477C-9AEE-B9344D38FC23</key>
@@ -118,6 +138,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -126,6 +148,8 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Will open the Dev Token page for ya.</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>E9287309-7561-4BCF-A4CA-CF4113D451DD</key>
@@ -137,6 +161,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -145,6 +171,8 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Show in Browser</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -161,6 +189,53 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>es</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
+
+node app.js "search" "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Evernote</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>593B469B-6513-4F3F-9CCA-F4ABD9FD8534</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -175,10 +250,18 @@
 				<integer>1</integer>
 				<key>queuemode</key>
 				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
 				<key>script</key>
 				<string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 node app.js "search" "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
 				<string>Search Evernote</string>
 				<key>type</key>
@@ -191,7 +274,7 @@ node app.js "search" "{query}"</string>
 			<key>uid</key>
 			<string>764508F5-5780-46DC-90CD-1EEC82BE7452</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -204,6 +287,10 @@ node app.js "search" "{query}"</string>
 				<string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 open `node app.js "get-link" "app" "{query}"` || echo "Unable to open note."</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -212,11 +299,13 @@ open `node app.js "get-link" "app" "{query}"` || echo "Unable to open note."</st
 			<key>uid</key>
 			<string>1E817040-44F2-45E5-92B1-78D552BC10A3</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>escaping</key>
@@ -231,10 +320,18 @@ open `node app.js "get-link" "app" "{query}"` || echo "Unable to open note."</st
 				<integer>0</integer>
 				<key>queuemode</key>
 				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
 				<key>script</key>
 				<string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 node app.js "search" "updated:day-7"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
 				<string>Show Recntely Updated Notes</string>
 				<key>type</key>
@@ -247,11 +344,13 @@ node app.js "search" "updated:day-7"</string>
 			<key>uid</key>
 			<string>E9287309-7561-4BCF-A4CA-CF4113D451DD</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>escaping</key>
@@ -266,10 +365,18 @@ node app.js "search" "updated:day-7"</string>
 				<integer>0</integer>
 				<key>queuemode</key>
 				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
 				<key>script</key>
 				<string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 node app.js "search" "todo:false"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
 				<string>Show Notes that contain pending TODOs</string>
 				<key>type</key>
@@ -282,11 +389,13 @@ node app.js "search" "todo:false"</string>
 			<key>uid</key>
 			<string>2CE06F60-F11A-4590-9D9B-746B1DF21A04</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>escaping</key>
@@ -301,10 +410,18 @@ node app.js "search" "todo:false"</string>
 				<integer>0</integer>
 				<key>queuemode</key>
 				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
 				<key>script</key>
 				<string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 node app.js "search" "created:day-14"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
 				<string>Show Recntely Created Notes</string>
 				<key>type</key>
@@ -317,7 +434,7 @@ node app.js "search" "created:day-14"</string>
 			<key>uid</key>
 			<string>ACD8117F-82C9-4665-B13C-6C6F585F2F16</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -330,6 +447,10 @@ node app.js "search" "created:day-14"</string>
 				<string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 open `node app.js "get-link" "www" "{query}"` || echo "Unable to open note."</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -338,7 +459,7 @@ open `node app.js "get-link" "www" "{query}"` || echo "Unable to open note."</st
 			<key>uid</key>
 			<string>3DE67E6A-0E58-40C8-9720-000B41222200</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -351,6 +472,10 @@ open `node app.js "get-link" "www" "{query}"` || echo "Unable to open note."</st
 				<string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 node app.js "token" "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -359,7 +484,7 @@ node app.js "token" "{query}"</string>
 			<key>uid</key>
 			<string>58A09C85-AA7A-48BB-8CC6-F3ECA65E432A</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -368,11 +493,7 @@ node app.js "token" "{query}"</string>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
 				<true/>
-				<key>output</key>
-				<integer>0</integer>
 				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
 				<false/>
 				<key>text</key>
 				<string>{query}</string>
@@ -384,7 +505,7 @@ node app.js "token" "{query}"</string>
 			<key>uid</key>
 			<string>1E13D173-B54C-4113-BC97-822A51977A4D</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -405,13 +526,15 @@ node app.js "token" "{query}"</string>
 			<key>uid</key>
 			<string>C711834B-2A95-477C-9AEE-B9344D38FC23</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>plusspaces</key>
-				<false/>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
 				<key>url</key>
 				<string>https://www.evernote.com/api/DeveloperToken.action</string>
 				<key>utf8</key>
@@ -422,7 +545,7 @@ node app.js "token" "{query}"</string>
 			<key>uid</key>
 			<string>759F2B01-5583-4B0F-8F5E-6F74E40037D9</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -431,6 +554,8 @@ node app.js "token" "{query}"</string>
 				<integer>1</integer>
 				<key>keyword</key>
 				<string>es-help</string>
+				<key>subtext</key>
+				<string></string>
 				<key>text</key>
 				<string>Show Evernote Search Grammar.</string>
 				<key>withspace</key>
@@ -441,13 +566,15 @@ node app.js "token" "{query}"</string>
 			<key>uid</key>
 			<string>228750F9-D283-40D1-B09F-93C80911C868</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>plusspaces</key>
-				<false/>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
 				<key>url</key>
 				<string>https://dev.evernote.com/doc/articles/search_grammar.php</string>
 				<key>utf8</key>
@@ -458,46 +585,13 @@ node app.js "token" "{query}"</string>
 			<key>uid</key>
 			<string>5343066C-C222-46B4-B013-AE33BE396713</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>127</integer>
-				<key>keyword</key>
-				<string>es</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
+				<key>alfredfiltersresults</key>
 				<false/>
-				<key>queuedelaymode</key>
-				<integer>1</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>script</key>
-				<string>export PATH=/usr/local/bin:$HOME/n/bin:$PATH
-
-node app.js "search" "{query}"</string>
-				<key>title</key>
-				<string>Search Evernote</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>593B469B-6513-4F3F-9CCA-F4ABD9FD8534</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>escaping</key>
@@ -512,6 +606,8 @@ node app.js "search" "{query}"</string>
 				<integer>0</integer>
 				<key>queuemode</key>
 				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
 				<key>script</key>
 				<string># How to create a new shortcut
 #
@@ -522,6 +618,12 @@ node app.js "search" "{query}"</string>
 export PATH=/usr/local/bin:$HOME/n/bin:$PATH
 
 node app.js "search" "your-query"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
 				<string>Template to create new Search Shortcut</string>
 				<key>type</key>
@@ -534,7 +636,7 @@ node app.js "search" "your-query"</string>
 			<key>uid</key>
 			<string>FA4E35D9-BA8D-4ADC-8270-B764C22877B7</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -543,71 +645,102 @@ node app.js "search" "your-query"</string>
 	<dict>
 		<key>1E13D173-B54C-4113-BC97-822A51977A4D</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>490</real>
 		</dict>
 		<key>1E817040-44F2-45E5-92B1-78D552BC10A3</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>228750F9-D283-40D1-B09F-93C80911C868</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>610</real>
 		</dict>
 		<key>2CE06F60-F11A-4590-9D9B-746B1DF21A04</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>230</real>
 		</dict>
 		<key>3DE67E6A-0E58-40C8-9720-000B41222200</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>340</real>
 		</dict>
 		<key>5343066C-C222-46B4-B013-AE33BE396713</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>720</real>
 		</dict>
 		<key>58A09C85-AA7A-48BB-8CC6-F3ECA65E432A</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>490</real>
 		</dict>
+		<key>593B469B-6513-4F3F-9CCA-F4ABD9FD8534</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+		</dict>
 		<key>759F2B01-5583-4B0F-8F5E-6F74E40037D9</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>600</real>
 		</dict>
 		<key>764508F5-5780-46DC-90CD-1EEC82BE7452</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>ACD8117F-82C9-4665-B13C-6C6F585F2F16</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>340</real>
 		</dict>
 		<key>C711834B-2A95-477C-9AEE-B9344D38FC23</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>490</real>
 		</dict>
 		<key>E9287309-7561-4BCF-A4CA-CF4113D451DD</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
 		<key>FA4E35D9-BA8D-4ADC-8270-B764C22877B7</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>850</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/shaoshing/alfred-evernote</string>
 </dict>
 </plist>

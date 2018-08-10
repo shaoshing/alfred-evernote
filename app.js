@@ -21,80 +21,87 @@ actionHandler.onAction("search", function(query) {
         return;
     }
 
-    var Evernote = require('evernote').Evernote,
+    var Evernote = require('evernote'),
         client = new Evernote.Client({token: devToken, sandbox: false}),
         userID = storage.get('userID'),
         shardID = storage.get('shardID');
 
     // Support Evernote Advanced Search Syntax
     // https://help.evernote.com/hc/en-us/articles/208313828-How-to-use-Evernote-s-advanced-search-syntax
-    var filter = new Evernote.NoteFilter({ words: query, order: Evernote.NoteSortOrder.UPDATED });
+    var filter = new  Evernote.NoteStore.NoteFilter({
+        words: query,
+        order: 2 // sort by UPDATED date (https://dev.evernote.com/doc/reference/Types.html#Enum_NoteSortOrder)
+    });
 
-    client.getNoteStore().findNotes(devToken, filter, 0, MAX_RESULTS, function (err, result) {
-        if (err) {
+    var spec = new Evernote.NoteStore.NotesMetadataResultSpec({
+        includeTitle: true,
+        includeUpdated: true,
+        includeNotebookGuid: true
+    });
+
+    client.getNoteStore().findNotesMetadata(filter, 0, MAX_RESULTS, spec)
+        .then(function (result) {
+            if (result.totalNotes == 0) {
+                workflow.addItem(new Item({
+                    title: "Cannot find a Note for your search!",
+                    valid: false,
+                    icon: 'error.png'
+                }));
+                workflow.feedback();
+                return;
+            }
+
+            result.notes.forEach(function (note) {
+                var updatedAt = new Date(note.updated);
+
+                workflow.addItem(new Item({
+                    uid: note.guid,
+                    title: note.title,
+                    arg: note.guid,
+                    valid: true,
+                    subtitle: ["Updated:", updatedAt.toLocaleString()].join(" "),
+                    icon: 'note.png'
+                }));
+            })
+
+            workflow.feedback();
+        })
+        .catch(function (err) {
             workflow.addItem(new Item({
                 title: 'Hmm, unable to perform a search request. You may need a new token.',
                 valid: false
             }));
             workflow.feedback();
-            return;
-        }
-
-        if (result.totalNotes == 0) {
-            workflow.addItem(new Item({
-                title: "Cannot find a Note for your search!",
-                valid: false,
-                icon: 'error.png'
-            }));
-            workflow.feedback();
-            return;    
-        }
-
-        result.notes.forEach(function (note) {
-            var updatedAt = new Date(note.updated);
-            
-            workflow.addItem(new Item({
-                uid: note.guid,
-                title: note.title,
-                arg: note.guid,
-                valid: true,
-                subtitle: ["Updated:", updatedAt.toLocaleString()].join(" "),
-                icon: 'note.png'
-            }));
         })
-
-        workflow.feedback();
-    });
 });
 
 actionHandler.onAction("token", function(query) {
-    var Evernote = require('evernote').Evernote,
+    var Evernote = require('evernote'),
         fs = require('fs'),
         token = query,
-        client = new Evernote.Client({token: token, sandbox: false});
+        client = new Evernote.Client({ token: token, sandbox: false });
 
-    client.getUserStore().getUser(function (err, user) {
-        if (err) {
-            console.log("Oops, your token seems invalid.");
-            return;
-        }
-        
-        storage.set('devToken', token);
-        storage.set('userID', user.id);
-        storage.set('shardID', user.shardId);
+    client.getUserStore().getUser()
+        .then(function (user) {
+            storage.set('devToken', token);
+            storage.set('userID', user.id);
+            storage.set('shardID', user.shardId);
 
-        console.log("Hooray, your token has been accepted! Your user ID is %s.", storage.get('userID'));
-    });
+            console.log("Hooray, your token has been accepted! Your user ID is %s.", storage.get('userID'));
+        })
+        .catch(function(err) {
+            console.log("Oops, your token seems invalid: ", err.message);
+        })
 });
 
 actionHandler.onAction("get-link", function(linkType) {
     var userID = storage.get('userID'),
         shardID = storage.get('shardID'),
         noteGUID = process.argv[process.argv.length - 1];
-    
+
     // https://dev.evernote.com/doc/articles/note_links.php
     switch (linkType) {
-        case "app":    
+        case "app":
             console.log("evernote:///view/%s/%s/%s/%s/", userID, shardID, noteGUID, noteGUID);
             break;
         case "www":
